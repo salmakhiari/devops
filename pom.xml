@@ -11,7 +11,6 @@
 	<groupId>tn.esprit</groupId>
 	<artifactId>ExamThourayaS2</artifactId>
 	<version>1.0</version>
-	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	<name>ExamThourayaS2</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
