@@ -1,8 +1,9 @@
+
 version: "3.7"
 
 services:
   mysqldb:
-    image: mysql:8
+    image: mysql:5.7
     restart: unless-stopped
     env_file: ./.env
     environment:
@@ -12,12 +13,12 @@ services:
       - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
     volumes:
       - db:/var/lib/mysql
-  tpachatimage:
+  app:
     depends_on:
       - mysqldb
     build:
       context: "./"
-      dockerfile: "./Dockerfile"
+      dockerfile: "Dockerfile"
     restart: on-failure
     env_file: ./.env
     ports:
